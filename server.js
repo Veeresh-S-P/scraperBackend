@@ -19,8 +19,9 @@ connection.then(() => {
     console.error('Failed to connect to MongoDB', err);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+
+// app.listen(PORT, () => {
+//     console.log(`Server is running on port ${PORT}`);
+// });
 
 module.exports = app;

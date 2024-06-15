@@ -21,7 +21,7 @@ const scrapeArticles = async (req, res) => {
             articleElements.forEach((element) => {
                 const title = element.querySelector('a > h2')?.innerText || 'No title';
                 const author = element.querySelector('div > div > a > p')?.innerText || 'No author';
-                const publicationDate = element.querySelector('.b1 > span')?.innerText || 'No date';
+                const publicationDate = element.querySelector('time')?.innerText || 'No date';
                 let url;
                 const divWithRoleLink = element.querySelector('div[role="link"]');
                 if (divWithRoleLink) {
